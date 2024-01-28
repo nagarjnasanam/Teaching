@@ -11,3 +11,8 @@ x =10
 
  //re-assignn data to variable
 x =898
+
+
+var y=258
+
+console.log(y=45)
