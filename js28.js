@@ -39,3 +39,4 @@ function multi(a,b){
 
 var out=multi(4,9);
 console.log(out);
+console.log(multi(5,10))
