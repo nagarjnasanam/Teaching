@@ -6,7 +6,20 @@
 </head>
 
 <body>
-    <h1>Heading 1</h1>
+    <h1 ondblclick="myFunction()">Heading 1</h1>
+    <p id="text"></p>
+    <input id="myname" type="text" placeholder="Enter your Name" oninput="changevalue()">
+    <script>
+        function myFunction() {
+            console.log("This is a event function");
+            document.getElementById("text").innerHTML = "This is a html event txt element";
+        }
+
+        function changevalue() {
+            let myName = document.getElementById("myname").value;
+            console.log("Event", myName);
+        }
+    </script>
 </body>
 
 </html>
