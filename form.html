@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <h1 onclick="myfunction()"><b>UserInformation</b></h1>
+    <p id="titile">Personal Information of Student</p>
+    <input type="text" id="text" placeholder="Enter Student Name" oninput="changevalue()">
+    <p>Email</p>
+    <input type="text1" id="text1" placeholder="Enter Student Email">
+    <p>Address</p>
+    <input type="text2" id="text2" placeholder="Enter Student Address">
+    <h2>Working Status</h2>
+    <select>
+        <option value="Active">Active </option>
+        <option value="InActive">InActive</option>
+    </select>
+    <h2>Gender</h2>
+    <p>Male</p>
+    <input type="radio" name="gender" id="Male">
+    <p>Female</p>
+    <input type="radio" name="gender" id="Female">
+    <button id="button" onclick="displaydate()">Submit</button>
+    <script>
+        function myfunction() {
+            let variable = "Madhuri";
+            document.getElementById("titile").innerHTML = `Gurram ${variable} ${variable}`;
+            alert(variable);
+
+            // document.getElementById("titile").innerHTML = "Gurram" + variable;
+        }
+        function changevalue() {
+            let txt = document.getElementById("text").value
+            console.log("Event", txt)
+        }
+        function displaydate() {
+            document.getElementById("button").innerHTML = Date();
+        }
+    </script>
+</body>
+
+</html>
