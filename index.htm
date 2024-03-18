@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Search</title>
+</head>
+
+<body>
+
+    <input type="text" id="searchInput" placeholder="Enter a name...">
+    <ul id="nameList"></ul>
+
+    <script>
+        const names = [
+            "Ethan", "Sophia", "Liam", "Olivia", "Jackson", "Emma", "Noah", "Ava", "Mason",
+            "Isabella", "Lucas", "Mia", "Oliver", "Amelia", "Aiden", "Harper", "Elijah",
+            "Evelyn", "Logan", "Abigail", "James", "Charlotte", "Benjamin", "Emily", "William",
+            "Elizabeth", "Michael", "Avery", "Alexander", "Sofia"
+        ];
+
+        const searchInput = document.getElementById('searchInput');
+        const nameList = document.getElementById('nameList');
+
+        function displayNames(namesArray) {
+            nameList.innerHTML = '';
+            namesArray.forEach(name => {
+                const li = document.createElement('li');
+                li.textContent = name;
+                nameList.appendChild(li);
+            });
+        }
+
+        displayNames(names);
+
+        searchInput.addEventListener('input', function () {
+            const searchTerm = this.value.trim().toLowerCase();
+            const filteredNames = names.filter(name => name.toLowerCase().includes(searchTerm));
+            displayNames(filteredNames);
+        });
+    </script>
+
+</body>
+
+</html>

@@ -22,7 +22,6 @@ for(num =0 ;num<numbers.length;num++){
 
 // objects
 const dataObject = { a:10000000, b:2,c:6786,g:909}
-const cars = [{ name:"audi", color:"red"},{ name:"benz", color:"blue"},{ name:"lamborgini", color:"orange"}]
 
 
 //for in
@@ -32,6 +31,12 @@ for(data in dataObject){
 }
 
 // for of
+const cars = [
+    { name:"audi", color:"red"},
+    { name:"benz", color:"blue"},
+    { name:"lamborgini", color:"orange"}
+]
+
 for(data of cars){
     console.log("for of",data)
     for(key in data){

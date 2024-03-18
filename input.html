@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <input id="inputtag" placeholder="enter name" oninput="searchNames()" />
+    <ul id="nameslist">
+    </ul>
+
+
+    <script>
+        const names = [
+            "nagarjuna", "madhri"
+        ];
+
+
+        const nameList = document.getElementById("nameslist")
+
+        function displayNames(namesArray) {
+            debugger
+            nameList.innerHTML = '';
+            // namesArray.forEach(name => {
+            //     const li = document.createElement('li');
+            //     li.textContent = name;
+            //     nameList.appendChild(li);
+            // });
+            for (var i = 0; i < namesArray.length; i++) {
+                const li = document.createElement('li');
+                li.textContent = names[i];
+                nameList.appendChild(li);
+            }
+        }
+
+        displayNames(names);
+
+        function searchNames() {
+            const enteredName = document.getElementById("inputtag")
+            console.log("hello", enteredName.value)
+
+            const filteredNames = names.filter(name => name.toLowerCase().includes(enteredName.value));
+            console.log("alklnsd", filteredNames)
+            displayNames(filteredNames);
+
+        }
+
+    </script>
+</body>
+
+</html>
