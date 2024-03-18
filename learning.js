@@ -23,3 +23,20 @@ for(i=0;i<arrayKeys.length;i++){
     console.log(keys);
     console.log("arrayObject",arrayObject[keys]);
 }
+
+const array=[8,9,0,2,4,6,0];
+for (num in array){
+    console.log("forIn",num,array[num]);
+}
+const setA=[1,0,9,3,7,2,7];
+for (i of setA){
+    console.log("forOf",i)
+}
+const material=[{name:"Samsung",height:32,price:32000},{name:"Sony",height:42,price:42000},{name:"LG",height:52,price:78000}];
+for(data of material){
+    console.log("materialforOf",data);
+    for (key in data){
+        console.log("materialforIn",key,data[key]);
+    }
+}
+
